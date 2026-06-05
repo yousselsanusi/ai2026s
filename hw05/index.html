@@ -13,7 +13,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
-<title>作業五</title>
+<title>作業五
+</title>
 <!-- https://alexlenail.me/NN-SVG/about.html -->
 <link rel="icon" href="../hw00/favicon.svg"/>
 <style type="text/css">
@@ -153,7 +154,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      本次作業讓我初步接觸文生圖技術，並使用 ComfyUI 進行實作。透過節點式介面串接 Checkpoint、LoRA、Prompt 與 KSampler 等模組，建立完整的圖像生成流程。在實驗過程中，我嘗試不同的 Checkpoint 與 LoRA 組合，觀察其對角色外觀、畫風與細節表現的影響，最後成功生成芙莉蓮與辛梅爾相關圖像，也更加了解生成式 AI 的運作原理與應用方式。
     </div>
   </div>
 
@@ -169,22 +170,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - 完成ComfyUI建置</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 完成芙莉蓮文生圖</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 替換模型完成辛梅爾文生圖</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -194,18 +195,48 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12 bottomrow">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+  <div class="row hw12">
+    <div class="col-md-12 twenty" style="background-color:#00AC48;">    
+      <figure>
+        <figcaption>ComfyUI+工作流</figcaption>
+            <img src="Simple Baseline.png" width="100%"/>
+        </figure>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty" style="background-color:#ff0000;"> 
+      <figure>
+        <figcaption>完成芙莉蓮、欣梅爾Checkpoint文生圖</figcaption>
+        <a href="https://civitai.com/models/820208/obsession-illustrious-xl">Checkpoint連結</a>
+        <p>1344 * 768</p>
+        <p>Frieren, Himmel, 1girl, 1boy, Frieren with long silver hair, green eyes, elf ears, white and gold outfit, Himmel with short blue hair, blue eyes, handsome young hero, blue cloak, white cape, looking into each other's eyes, face to face, romantic atmosphere, gentle expressions, close-up portrait, upper body, forest background, green leaves, sunlight filtering through trees, dappled sunlight, warm sunlight, soft lighting, cinematic lighting, volumetric lighting, depth of field, bokeh, anime key visual, official art, anime illustration, highly detailed eyes, highly detailed hair, highly detailed clothing, beautiful composition, sharp focus, masterpiece, best quality, amazing quality, very aesthetic, absurdres</p>
+        <p>worst quality, low quality, normal quality, lowres, blurry, jpeg artifacts, bad anatomy, bad proportions, deformed, bad hands, extra fingers, missing fingers, fused fingers, extra arms, extra legs, cross-eyed, lazy eye, duplicate, multiple faces, multiple boys, multiple girls, cropped, out of frame, watermark, signature, text, logo, 3d, realistic, photorealistic, cgi, render, old man, old woman, nsfw</p>
+        <img src="Medium Baseline.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty" style="background-color:#7030a0;">    
+      <figure>
+        <figcaption>替換Ckeckpoint、LoRA完成芙莉蓮、欣梅爾文生圖</figcaption>
+        <a href="https://civitai.com/models/820208/obsession-illustrious-xl">Checkpoint連結</a>
+        <br>
+        <a href="https://civitai.com/models/1209474/test-lora?modelVersionId=1373925">LoRA連結</a>
+        <br>
+        <p>1344 * 768</p>
+        <p>LoRA Strength : 1.00</p>
+        <p>Frieren, Himmel, 1girl, 1boy, Frieren with long silver hair, green eyes, elf ears, white and gold outfit, Himmel with short blue hair, blue eyes, handsome young hero, blue cloak, white cape, looking into each other's eyes, face to face, romantic atmosphere, gentle expressions, close-up portrait, upper body, forest background, green leaves, sunlight filtering through trees, dappled sunlight, warm sunlight, soft lighting, cinematic lighting, volumetric lighting, depth of field, bokeh, anime key visual, official art, anime illustration, highly detailed eyes, highly detailed hair, highly detailed clothing, beautiful composition, sharp focus, masterpiece, best quality, amazing quality, very aesthetic, absurdres</p>
+        <p>worst quality, low quality, normal quality, lowres, blurry, jpeg artifacts, bad anatomy, bad proportions, deformed, bad hands, extra fingers, missing fingers, fused fingers, extra arms, extra legs, cross-eyed, lazy eye, duplicate, multiple faces, multiple boys, multiple girls, cropped, out of frame, watermark, signature, text, logo, 3d, realistic, photorealistic, cgi, render, old man, old woman, nsfw</p>
+        <img src="Strong Baseline.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
 
+  <!-- ------------------------------------------------>
 
 <script>
   $(function() {
